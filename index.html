@@ -3,10 +3,146 @@
   <head>
     <meta charset="utf-8" />
     <title>Vertu Motors</title>
-    <link href="styles.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <span>Hello World!</span>
+    <header>
+      <nav>
+        Logo
+        <select name="new cars" id="new cars">
+          <option value="">New cars</option>
+        </select>
+        <select name="used cars" id="used cars">
+          <option value="">Used cars</option>
+        </select>
+        <select name="servicing" id="servicing">
+          <option value="">Servicing</option>
+        </select>
+        <select name="commercials" id="commercials">
+          <option value="">Commercials</option>
+        </select>
+        Motability
+      </nav>
+      <input
+        type="search"
+        name="search"
+        placeholder="Search: Make, model or location"
+      />
+      Find us Save Log in
+    </header>
+    <main>
+      <article>
+        <h1>Explore the new BMW i4 range</h1>
+        <p>
+          From the cool Trend and SUV-inspired Active to the sporty ST-Line, the
+          eighth generation Fiesta impresses across the range.
+        </p>
+        <button type="button">Book a test drive</button>
+        <img src="./assets/Hero-banner-desktop.jpg" alt="BMW i4 white" />
+      </article>
+
+      <h1>BMW i4 trims</h1>
+      <div class="card-container">
+        <article class="card">
+          <img
+            class="card-img"
+            src="./assets/Trim-01.jpg"
+            alt="BMW i4 M 50 blue"
+          />
+          <h1>M 50</h1>
+          <p>From £65,795</p>
+          <ul>
+            <li>Velour floor mats</li>
+            <li>Sun protection glass</li>
+            <li>Automatic Stability Control (ASC)</li>
+            <li>Adaptive M suspension</li>
+            <li>Storage for wireless charging</li>
+            <li>Cruise control with brake assist</li>
+            <li>Automatic tailgate operation</li>
+          </ul>
+        </article>
+        <article class="card">
+          <img
+            class="card-img"
+            src="./assets/Trim-02.jpg"
+            alt="BMW i4 M Sport white"
+          />
+          <h1>M Sport</h1>
+          <p>From £54,980</p>
+          <ul>
+            <li>Velour floor mats</li>
+            <li>Rain sensor including auto headlights activation</li>
+            <li>Automatic Stability Control (ASC)</li>
+            <li>Standard suspension</li>
+            <li>Electric Power Steering (EPS) with Servotronic</li>
+            <li>Automatic tailgate operation</li>
+          </ul>
+        </article>
+        <article class="card">
+          <img
+            class="card-img"
+            src="./assets/Trim-03.jpg"
+            alt="BMW i4 Sport black"
+          />
+          <h1>Sport</h1>
+          <p>From £53,480</p>
+          <ul>
+            <li>Velour floor mats</li>
+            <li>Rain sensor including auto headlights activation</li>
+            <li>Automatic Stability Control (ASC)</li>
+            <li>Standard suspension</li>
+            <li>Electric Power Steering (EPS) with Servotronic</li>
+            <li>Automatic tailgate operation</li>
+          </ul>
+        </article>
+      </div>
+
+      <article class="article-container">
+        <div class="article">
+          <h1>Explore the new BMW interior</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+          <button type="button">Request a Personalised Video</button>
+        </div>
+        <img
+          class="article-img"
+          src="./assets/Feature-01.jpg"
+          alt="Front panel of the BMW i4"
+        />
+      </article>
+      <article class="article-container article-container-reverse">
+        <div class="article">
+          <h1>Electrifying performance with the BMW i4</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis
+          </p>
+          <div>
+            <div>
+              <h2>02:05 hr</h2>
+              <p>Charging at home for a Range of 62 miles</p>
+            </div>
+            <div>
+              <h2>365</h2>
+              <p>Electric range in miles</p>
+            </div>
+          </div>
+          <button type="button">Book a test drive</button>
+        </div>
+        <img
+          class="article-img"
+          src="./assets/Feature-02.jpg"
+          alt="BMW i4 with electric charger"
+        />
+      </article>
+    </main>
+
     <script src="index.js"></script>
   </body>
 </html>
