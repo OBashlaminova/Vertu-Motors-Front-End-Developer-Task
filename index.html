@@ -7,29 +7,94 @@
   </head>
   <body>
     <header>
-      <nav>
-        Logo
-        <select name="new cars" id="new cars">
-          <option value="">New cars</option>
+      <nav class="header-nav">
+        <a class="logo" href="/">
+          <img src="./assets/vertu-motors-logo.png" alt="Vertu Motors logo" />
+        </a>
+        <!-- <select name="new cars" id="new cars">
+          <option value="">
+            <a href="/">New cars</a>
+          </option>
         </select>
         <select name="used cars" id="used cars">
-          <option value="">Used cars</option>
+          <option value="">
+            <a href="/">Used cars</a>
+          </option>
         </select>
         <select name="servicing" id="servicing">
-          <option value="">Servicing</option>
+          <option value="">
+            <a href="/">Servicing</a>
+          </option>
         </select>
         <select name="commercials" id="commercials">
-          <option value="">Commercials</option>
-        </select>
-        Motability
+          <option value="">
+            <a href="/">Commercials</a>
+          </option>
+        </select> -->
+        <button class="nav-button" type="button">
+          New cars
+          <img
+            class="nav-button-icon"
+            src="./assets/arrow-down.svg"
+            alt="Arrow expand"
+          />
+        </button>
+        <button class="nav-button" type="button">
+          Used cars
+          <img
+            class="nav-button-icon"
+            src="./assets/arrow-down.svg"
+            alt="Arrow expand"
+          />
+        </button>
+        <button class="nav-button" type="button">
+          Servicing
+          <img
+            class="nav-button-icon"
+            src="./assets/arrow-down.svg"
+            alt="Arrow expand"
+          />
+        </button>
+        <button class="nav-button" type="button">
+          Commercials
+          <img
+            class="nav-button-icon"
+            src="./assets/arrow-down.svg"
+            alt="Arrow expand"
+          />
+        </button>
+        <button class="nav-button" type="button">
+          <a href="/">Motability</a>
+        </button>
+
+        <div class="header-search">
+          <img class="header-search-icon" src="./assets/search.svg" alt="" />
+          <input
+            class="header-search-input"
+            type="search"
+            name="search"
+            placeholder="Search: Make, model or location"
+          />
+          <button class="header-search-icon" type="button">
+            <img src="./assets/mic.svg" alt="" />
+          </button>
+        </div>
+
+        <a class="nav-icon-item" href="/">
+          <img class="nav-icon" src="./assets/location.svg" alt="Find us" />
+          Find us
+        </a>
+        <a class="nav-icon-item" href="/">
+          <img class="nav-icon" src="./assets/heart.svg" alt="Saved" />
+          Saved
+        </a>
+        <a class="nav-icon-item" href="/">
+          <img class="nav-icon" src="./assets/person.svg" alt="Log in" />
+          Log in
+        </a>
       </nav>
-      <input
-        type="search"
-        name="search"
-        placeholder="Search: Make, model or location"
-      />
-      Find us Save Log in
     </header>
+
     <main>
       <article class="banner">
         <div class="banner-text">
@@ -49,7 +114,7 @@
         <h1 class="card-container-header">BMW i4 trims</h1>
         <div class="card-container">
           <button class="arrow-button back-button" type="button">
-            <img src="./assets/arrow_back.svg" alt="Arrow back" />
+            <img src="./assets/arrow-back.svg" alt="Arrow back" />
           </button>
 
           <article class="card">
@@ -58,9 +123,9 @@
               src="./assets/Trim-01.jpg"
               alt="BMW i4 M 50 blue"
             />
-            <h1>M 50</h1>
+            <h1 class="m-text">M 50</h1>
             <p>From £65,795</p>
-            <ul>
+            <ul class="card-list">
               <li>Velour floor mats</li>
               <li>Sun protection glass</li>
               <li>Automatic Stability Control (ASC)</li>
@@ -76,9 +141,9 @@
               src="./assets/Trim-02.jpg"
               alt="BMW i4 M Sport white"
             />
-            <h1>M Sport</h1>
+            <h1 class="m-text">M Sport</h1>
             <p>From £54,980</p>
-            <ul>
+            <ul class="card-list">
               <li>Velour floor mats</li>
               <li>Rain sensor including auto headlights activation</li>
               <li>Automatic Stability Control (ASC)</li>
@@ -93,9 +158,9 @@
               src="./assets/Trim-03.jpg"
               alt="BMW i4 Sport black"
             />
-            <h1>Sport</h1>
+            <h1 class="m-text">Sport</h1>
             <p>From £53,480</p>
-            <ul>
+            <ul class="card-list">
               <li>Velour floor mats</li>
               <li>Rain sensor including auto headlights activation</li>
               <li>Automatic Stability Control (ASC)</li>
@@ -106,7 +171,7 @@
           </article>
 
           <button class="arrow-button forward-button" type="button">
-            <img src="./assets/arrow_forward.svg" alt="Arrow forward" />
+            <img src="./assets/arrow-forward.svg" alt="Arrow forward" />
           </button>
         </div>
       </div>
@@ -131,6 +196,7 @@
           alt="Front panel of the BMW i4"
         />
       </article>
+
       <article class="article-container article-container-reverse">
         <div class="article">
           <h1 class="xl-text">Electrifying performance with the BMW i4</h1>
