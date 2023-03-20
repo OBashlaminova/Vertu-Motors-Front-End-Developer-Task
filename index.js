@@ -51,3 +51,34 @@ function rightCarouselMove() {
 }
 
 // Select Menu
+
+const headerNav = document.querySelector('.header-nav');
+
+headerNav.addEventListener('click', (event) => toggleDropdown(event));
+
+function toggleDropdown(event) {
+  const target = event.target;
+  if (!target.classList.contains('dropdown-button')) return;
+
+  const dropdownContainer = target.parentElement;
+  const dropdown = dropdownContainer.querySelector('.dropdown');
+  dropdown.classList.toggle('open');
+}
+
+document.addEventListener('click', (event) => closeDropdown(event));
+
+function closeDropdown(event) {
+  const target = event.target;
+  if (target.classList.contains('dropdown')) return;
+  if (target.classList.contains('dropdown-button')) return;
+
+  const dropdownNodeList = document.querySelectorAll('.dropdown');
+  const dropdownCount = dropdownNodeList.length;
+
+  for (let i = 0; i < dropdownCount; i++) {
+    var dropdown = dropdownNodeList[i];
+    if (dropdown.classList.contains('open')) {
+      dropdown.classList.remove('open');
+    }
+  }
+}

@@ -19,6 +19,8 @@
 
   --thin-font-weight: 300;
   --bold-font-weight: 700;
+
+  --box-shadow-main: #63636333 0px 2px 8px 0px;
 }
 
 .m-text {
@@ -87,7 +89,7 @@ header {
   background: var(--white-color);
   height: 70px;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
 }
 
 .header-nav {
@@ -106,15 +108,63 @@ header {
 }
 
 .nav-button {
-  align-items: center;
+  border-radius: 20px;
   display: flex;
   font-size: var(--xs-font-size);
   font-weight: bold;
+  line-height: 3em;
+  padding: 0 1em;
+  align-items: center;
+}
+
+.nav-button:hover {
+  background: var(--grey-color);
 }
 
 .nav-button-icon {
   height: 16px;
+  pointer-events: none;
   width: 16px;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown {
+  background: var(--white-color);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-main);
+  display: none;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 1.5em 0;
+  position: absolute;
+  width: max-content;
+  z-index: 2;
+}
+
+.open {
+  display: flex;
+}
+
+.dropdown a {
+  font-size: var(--xs-font-size);
+  font-weight: bold;
+  line-height: 3em;
+  padding: 0 2em;
+}
+
+.dropdown a:hover {
+  background: var(--grey-color);
+}
+
+.dropdown a:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.dropdown a:last-child {
+  border-radius: 0 0 10px 10px;
 }
 
 .header-search {
@@ -207,7 +257,7 @@ header {
 
 .card {
   border-radius: 10px;
-  box-shadow: #63636333 0px 2px 8px 0px;
+  box-shadow: var(--box-shadow-main);
   margin: 0 1em;
   max-width: 360px;
   padding: 0 2em 1em 2em;
@@ -296,7 +346,7 @@ header {
 .arrow-button {
   background-color: var(--white-color);
   border-radius: 50%;
-  box-shadow: #63636333 0px 2px 8px 0px;
+  box-shadow: var(--box-shadow-main);
   height: 35px;
   padding: 8px;
   width: 35px;
