@@ -195,11 +195,14 @@ header {
 }
 
 .card-container {
-  display: flex;
-  justify-content: center;
   margin: auto;
   position: relative;
   width: 1200px;
+}
+
+.card-carousel {
+  display: flex;
+  justify-content: center;
 }
 
 .card {
@@ -310,13 +313,13 @@ header {
   transform: translateX(-5%);
 }
 
-.forward-button {
+.next-button {
   position: absolute;
   right: 10px;
   top: 40%;
   z-index: 2;
 }
 
-.forward-button img {
+.next-button img {
   transform: translateX(5%);
 }
