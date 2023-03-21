@@ -8,6 +8,16 @@
   <body>
     <header>
       <nav class="header-nav">
+        <div class="menu-container">
+          <input type="checkbox" class="menu-checkbox" />
+          <img class="nav-icon-mobile" src="./assets/menu.svg" alt="Menu" />
+          <ul class="menu">
+            <li><a href="/">Option 1</a></li>
+            <li><a href="/">Option 2</a></li>
+            <li><a href="/">Option 3</a></li>
+          </ul>
+        </div>
+
         <a class="logo" href="/">
           <img src="./assets/vertu-motors-logo.png" alt="Vertu Motors logo" />
         </a>
@@ -105,6 +115,19 @@
           <img class="nav-icon" src="./assets/person.svg" alt="Log in" />
           Log in
         </a>
+
+        <a class="nav-icon-mobile" href="/"
+          ><img src="./assets/search.svg" alt="Search"
+        /></a>
+        <a class="nav-icon-mobile" href="/"
+          ><img src="./assets/heart.svg" alt="Saved"
+        /></a>
+        <a class="nav-icon-mobile" href="/"
+          ><img src="./assets/person.svg" alt="Log in"
+        /></a>
+        <a class="nav-icon-mobile" href="/"
+          ><img src="./assets/call.svg" alt="Contact us"
+        /></a>
       </nav>
     </header>
 
@@ -121,6 +144,24 @@
           </button>
         </div>
         <img src="./assets/Hero-banner-desktop.jpg" alt="BMW i4 white" />
+      </article>
+
+      <article class="article-container article-container-dark banner-mobile">
+        <img
+          class="article-img"
+          src="./assets/Hero-banner-mobile.jpg"
+          alt="BMW i4 white"
+        />
+        <div class="article">
+          <h1 class="xl-text">Explore the new BMW i4 range</h1>
+          <p>
+            From the cool Trend and SUV-inspired Active to the sporty ST-Line,
+            the eighth generation Fiesta impresses across the range.
+          </p>
+          <button class="primary-button" type="button">
+            Book a test drive
+          </button>
+        </div>
       </article>
 
       <div class="card-section">
@@ -191,34 +232,35 @@
         </div>
       </div>
 
-      <article class="article-container">
-        <div class="article">
-          <h1 class="xl-text">Explore the new BMW interior</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
-          </p>
-          <button class="primary-button" type="button">
-            Request a Personalised Video
-          </button>
-        </div>
+      <article class="article-container article-container-reverse">
         <img
           class="article-img"
           src="./assets/Feature-01.jpg"
           alt="Front panel of the BMW i4"
         />
+        <div class="article">
+          <h1 class="xl-text">Explore the new BMW interior</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <button class="primary-button" type="button">
+            Request a Personalised Video
+          </button>
+        </div>
       </article>
 
-      <article class="article-container article-container-reverse">
+      <article class="article-container article-container-dark">
+        <img
+          class="article-img"
+          src="./assets/Feature-02.jpg"
+          alt="BMW i4 with electric charger"
+        />
         <div class="article">
           <h1 class="xl-text">Electrifying performance with the BMW i4</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <div class="article-details-container">
             <div class="article-details">
@@ -234,11 +276,6 @@
             Book a test drive
           </button>
         </div>
-        <img
-          class="article-img"
-          src="./assets/Feature-02.jpg"
-          alt="BMW i4 with electric charger"
-        />
       </article>
     </main>
 

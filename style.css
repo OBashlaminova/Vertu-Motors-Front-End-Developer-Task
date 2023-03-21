@@ -31,16 +31,20 @@
   font-size: var(--xl-font-size);
 }
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
+  min-height: 0;
+  min-width: 0;
 }
 
 h1, h2, li, p, ul {
-  margin: 0;
-  padding: 0;
   border: 0;
   font-size: 100%;
+  margin: 0;
   overflow-wrap: break-word;
+  padding: 0;
 }
 
 a {
@@ -60,6 +64,7 @@ body {
   font-family: 'Roboto', 'Noto Sans', sans-serif;
   margin: auto;
   max-width: 1400px;
+  min-width: 1200px;
 }
 
 header,
@@ -74,12 +79,12 @@ main {
 }
 
 button {
+  background: transparent;
   border: none;
   cursor: pointer;
-  text-align: center;
-  background: transparent;
   font-family: 'Roboto', 'Noto Sans', sans-serif;
   padding: 0;
+  text-align: center;
 }
 
 
@@ -108,13 +113,13 @@ header {
 }
 
 .nav-button {
+  align-items: center;
   border-radius: 20px;
   display: flex;
   font-size: var(--xs-font-size);
   font-weight: bold;
   line-height: 3em;
   padding: 0 1em;
-  align-items: center;
 }
 
 .nav-button:hover {
@@ -209,6 +214,12 @@ header {
   width: 22px;
 }
 
+.nav-icon-mobile {
+  display: none;
+  height: 30px;
+  width: 30px;
+}
+
 
 /* Banner */
 
@@ -229,6 +240,11 @@ header {
   top: 50%;
   transform: translateY(-50%);
   width: 320px;
+}
+
+.banner-mobile.article-container {
+  display: none;
+  text-align: center;
 }
 
 
@@ -273,9 +289,9 @@ header {
 }
 
 .card-list {
-  list-style-position: inside;
   font-size: var(--xs-font-size);
   line-height: 20px;
+  margin-left: 1em;
 }
 
 
@@ -288,9 +304,12 @@ header {
   padding: 4em 6em;
 }
 
-.article-container-reverse {
+.article-container-dark {
   background-color: var(--light-black-color);
   color: var(--white-color);
+}
+
+.article-container-reverse {
   flex-direction: row-reverse;
 }
 
@@ -302,7 +321,7 @@ header {
   max-width: 450px;
 }
 
-.article-container-reverse .article {
+.article-container-dark .article {
   margin-left: 3em;
   margin-right: 2em;
 }
@@ -372,4 +391,170 @@ header {
 
 .next-button img {
   transform: translateX(5%);
+}
+
+
+/* Hamburger Menu */
+
+.menu-container {
+  display: none;
+  position: relative;
+}
+
+.menu {
+  background: var(--white-color);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-main);
+  flex-direction: column;
+  list-style-type: none;
+  list-style: none;
+  margin: 1.5em 0.5em;
+  opacity: 0;
+  padding: 1em 2em;
+  position: absolute;
+  transform: translateX(-10%);
+  transition: transform 100ms ease-in-out, opacity 200ms;
+  width: max-content;
+}
+
+.menu li {
+  margin: 10px 0;
+}
+
+.menu a:hover {
+  color: var(--teal-color);
+}
+
+.menu-checkbox {
+  cursor: pointer;
+  height: 30px;
+  opacity: 0;
+  position: absolute;
+  width: 30px;
+  z-index: 3;
+}
+
+.menu-checkbox:checked~.menu {
+  display: flex;
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    margin: auto;
+    max-width: 350px;
+    min-width: 0;
+  }
+
+  .xl-text {
+    font-size: var(--l-font-size);
+  }
+
+
+  /* Header */
+
+  .header-nav {
+    padding: 0;
+    width: 350px;
+  }
+
+  .logo {
+    height: 35px;
+    width: 100px;
+  }
+
+  .nav-button,
+  .header-search,
+  .nav-icon-item {
+    display: none;
+  }
+
+  .nav-icon-mobile {
+    display: flex;
+  }
+
+
+  /* Banner */
+
+  .banner {
+    display: none;
+  }
+
+  .banner-mobile.article-container {
+    display: flex;
+  }
+
+  /* Cards */
+
+  .card-section {
+    margin: 2em 0;
+  }
+
+  .card-container-header {
+    margin: 0 20px;
+    width: 100%;
+  }
+
+  .card-container {
+    margin: auto;
+    position: relative;
+    width: 100%;
+  }
+
+  .card-carousel {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    margin: 1em 0;
+    max-width: 330px;
+  }
+
+  /* Articles */
+
+  .article-container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .article,
+  .article-container-dark .article {
+    margin: 1em;
+    max-width: 350px;
+  }
+
+  .article h1, p, button,
+  .article-details-container {
+    margin: 10px 0;
+  }
+
+  .article-details {
+    width: auto;
+  }
+
+  .article-img {
+    border-radius: 0;
+    max-width: 350px;
+  }
+
+
+  /* Buttons */
+
+  .primary-button {
+    width: 100%;
+  }
+
+  .arrow-button {
+    display: none;
+  }
+
+
+  /* Hamburger Menu */
+
+  .menu-container {
+    display: block;
+  }
 }
