@@ -1,0 +1,35 @@
+/* Banner */
+
+.banner {
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-evenly;
+  left: 10%;
+  position: absolute;
+  text-align: left;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+.banner-mobile.article-container {
+  display: none;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .banner {
+    display: none;
+  }
+
+  .banner-mobile.article-container {
+    display: flex;
+  }
+}
