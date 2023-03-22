@@ -1,0 +1,11 @@
+{
+  "name": "vertu-motors-front-end-developer-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "Volha Bashlaminava",
+  "license": "ISC"
+}

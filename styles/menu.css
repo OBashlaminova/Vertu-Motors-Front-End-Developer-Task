@@ -1,0 +1,51 @@
+/* Hamburger Menu */
+
+.menu-container {
+  display: none;
+  position: relative;
+}
+
+.menu {
+  background: var(--white-color);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-main);
+  flex-direction: column;
+  list-style-type: none;
+  list-style: none;
+  margin: 1.5em 0.5em;
+  opacity: 0;
+  padding: 1em 2em;
+  position: absolute;
+  transform: translateX(-10%);
+  transition: transform 100ms ease-in-out, opacity 200ms;
+  width: max-content;
+}
+
+.menu li {
+  margin: 10px 0;
+}
+
+.menu a:hover {
+  color: var(--teal-color);
+}
+
+.menu-checkbox {
+  cursor: pointer;
+  height: 30px;
+  opacity: 0;
+  position: absolute;
+  width: 30px;
+  z-index: 3;
+}
+
+.menu-checkbox:checked~.menu {
+  display: flex;
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+@media screen and (max-width: 1200px) {
+  .menu-container {
+    display: block;
+  }
+}

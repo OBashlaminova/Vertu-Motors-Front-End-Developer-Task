@@ -1,0 +1,153 @@
+/* Header */
+
+header {
+  background: var(--white-color);
+  height: 70px;
+  position: fixed;
+  z-index: 3;
+}
+
+.header-nav {
+  align-items: center;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  margin: auto;
+  padding: 0 1em;
+  width: 1200px;
+}
+
+.logo {
+  height: 35px;
+  width: 100px;
+}
+
+.nav-button {
+  align-items: center;
+  border-radius: 20px;
+  display: flex;
+  font-size: var(--xs-font-size);
+  font-weight: bold;
+  line-height: 3em;
+  padding: 0 1em;
+}
+
+.nav-button:hover {
+  background: var(--grey-color);
+}
+
+.nav-button-icon {
+  height: 16px;
+  pointer-events: none;
+  width: 16px;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown {
+  background: var(--white-color);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-main);
+  display: none;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 1.5em 0;
+  position: absolute;
+  width: max-content;
+  z-index: 2;
+}
+
+.open {
+  display: flex;
+}
+
+.dropdown a {
+  font-size: var(--xs-font-size);
+  font-weight: bold;
+  line-height: 3em;
+  padding: 0 2em;
+}
+
+.dropdown a:hover {
+  background: var(--grey-color);
+}
+
+.dropdown a:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.dropdown a:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+.header-search {
+  align-items: center;
+  background: var(--grey-color);
+  border-radius: 20px;
+  border: 1px solid var(--grey-color);
+  display: flex;
+}
+
+.header-search-input {
+  appearance: none;
+  background: transparent;
+  border: none;
+  font-size: var(--xs-font-size);
+  height: 30px;
+  padding: 0;
+  position: relative;
+  width: 200px;
+}
+
+.header-search-input:focus {
+  outline: none;
+}
+
+.header-search-icon {
+  height: 16px;
+  margin: 0 1em;
+  width: 16px;
+}
+
+.nav-icon-item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--xxs-font-size);
+  font-weight: 300;
+}
+
+.nav-icon {
+  height: 22px;
+  width: 22px;
+}
+
+.nav-icon-mobile {
+  display: none;
+  height: 30px;
+  width: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .header-nav {
+    padding: 0;
+    width: 350px;
+  }
+
+  .logo {
+    height: 35px;
+    width: 100px;
+  }
+
+  .nav-button,
+  .header-search,
+  .nav-icon-item {
+    display: none;
+  }
+
+  .nav-icon-mobile {
+    display: flex;
+  }
+}

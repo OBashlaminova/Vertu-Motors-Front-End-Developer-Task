@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+  --black-color: #000;
+  --light-black-color: #222;
+  --dark-grey-color: #013a3c;
+  --grey-color: #ededed;
+  --white-color: #fff;
+  --light-teal-color: #01e2c9;
+  --teal-color: #17a3a3;
+
+  --xxs-font-size: 10px;
+  --xs-font-size: 12px;
+  --s-font-size: 16px;
+  --m-font-size: 20px;
+  --l-font-size: 30px;
+  --xl-font-size: 40px;
+
+  --thin-font-weight: 300;
+  --bold-font-weight: 700;
+
+  --box-shadow-main: #63636333 0px 2px 8px 0px;
+}
+
+.m-text {
+  font-size: var(--m-font-size);
+}
+
+.xl-text {
+  font-size: var(--xl-font-size);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  min-height: 0;
+  min-width: 0;
+}
+
+h1, h2, li, p, ul {
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  overflow-wrap: break-word;
+  padding: 0;
+}
+
+a {
+  color: var(--black-color);
+  text-decoration: none;
+}
+
+p, li {
+  font-weight: 300;
+}
+
+body {
+  align-items: center;
+  color: var(--black-color);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', 'Noto Sans', sans-serif;
+  margin: auto;
+  max-width: 1400px;
+  min-width: 1200px;
+}
+
+header,
+main,
+article,
+img {
+  width: 100%;
+}
+
+main {
+  margin-top: 70px;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Roboto', 'Noto Sans', sans-serif;
+  padding: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    margin: auto;
+    max-width: 350px;
+    min-width: 0;
+  }
+
+  .xl-text {
+    font-size: var(--l-font-size);
+  }
+}
